@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56308/ServiceViaje.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56308/ServiceViaje.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56308/ServiceViaje.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NegocioEmp.Entidad" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceViaje_RegistrarViajes_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarViajes" />
+  </wsdl:message>
+  <wsdl:message name="IServiceViaje_RegistrarViajes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarViajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceViaje_RegistrarViajes2_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarViajes2" />
+  </wsdl:message>
+  <wsdl:message name="IServiceViaje_RegistrarViajes2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarViajes2Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceViaje_BuscarViajesTodos_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarViajesTodos" />
+  </wsdl:message>
+  <wsdl:message name="IServiceViaje_BuscarViajesTodos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarViajesTodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceViaje_BuscarViajes_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarViajes" />
+  </wsdl:message>
+  <wsdl:message name="IServiceViaje_BuscarViajes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarViajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceViaje_BuscarViajes2_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarViajes2" />
+  </wsdl:message>
+  <wsdl:message name="IServiceViaje_BuscarViajes2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarViajes2Response" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceViaje">
+    <wsdl:operation name="RegistrarViajes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceViaje/RegistrarViajes" message="tns:IServiceViaje_RegistrarViajes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceViaje/RegistrarViajesResponse" message="tns:IServiceViaje_RegistrarViajes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarViajes2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceViaje/RegistrarViajes2" message="tns:IServiceViaje_RegistrarViajes2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceViaje/RegistrarViajes2Response" message="tns:IServiceViaje_RegistrarViajes2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarViajesTodos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceViaje/BuscarViajesTodos" message="tns:IServiceViaje_BuscarViajesTodos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceViaje/BuscarViajesTodosResponse" message="tns:IServiceViaje_BuscarViajesTodos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarViajes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceViaje/BuscarViajes" message="tns:IServiceViaje_BuscarViajes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceViaje/BuscarViajesResponse" message="tns:IServiceViaje_BuscarViajes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarViajes2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceViaje/BuscarViajes2" message="tns:IServiceViaje_BuscarViajes2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceViaje/BuscarViajes2Response" message="tns:IServiceViaje_BuscarViajes2_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceViaje" type="tns:IServiceViaje">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarViajes">
+      <soap:operation soapAction="http://tempuri.org/IServiceViaje/RegistrarViajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarViajes2">
+      <soap:operation soapAction="http://tempuri.org/IServiceViaje/RegistrarViajes2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarViajesTodos">
+      <soap:operation soapAction="http://tempuri.org/IServiceViaje/BuscarViajesTodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarViajes">
+      <soap:operation soapAction="http://tempuri.org/IServiceViaje/BuscarViajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarViajes2">
+      <soap:operation soapAction="http://tempuri.org/IServiceViaje/BuscarViajes2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IServiceViaje" binding="tns:BasicHttpBinding_IServiceViaje">
+      <soap:address location="http://localhost:56308/ServiceViaje.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
