@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c19d57a9-15e0-4b95-a672-ccc603a345d3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56308/ServiceViaje.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceViaje.disco" MetadataType="Disco" ID="1f5003e2-fdcb-4321-8b5b-60fb3d451f4d" SourceId="1" SourceUrl="http://localhost:56308/ServiceViaje.svc?disco" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="df2fe6aa-e088-4fad-bc54-55c3d3b21492" SourceId="1" SourceUrl="http://localhost:56308/ServiceViaje.svc?wsdl" />
+    <MetadataFile FileName="ServiceViaje.xsd" MetadataType="Schema" ID="80402836-5425-4ea5-b63a-223077a85782" SourceId="1" SourceUrl="http://localhost:56308/ServiceViaje.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceViaje1.xsd" MetadataType="Schema" ID="e07bcef4-5a13-490f-ac13-f2b4038c170f" SourceId="1" SourceUrl="http://localhost:56308/ServiceViaje.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceViaje2.xsd" MetadataType="Schema" ID="275d8abd-2c84-4f6b-9a36-15e1daf1b1ff" SourceId="1" SourceUrl="http://localhost:56308/ServiceViaje.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

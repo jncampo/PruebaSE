@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56308/ServiceViaje.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NegocioEmp.Entidad" />
+  <xs:element name="RegistrarViajes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdEmpleado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="origenViaje" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DestinoViaje" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NombrePasajero" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id_Vehiculo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HoraInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="HoraFin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarViajesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegistrarViajesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarViajes2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTipoDocuemnto" type="xs:int" />
+        <xs:element minOccurs="0" name="IdNumeroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="origenViaje" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DestinoViaje" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NombrePasajero" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Placa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HoraInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="HoraFin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarViajes2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegistrarViajes2Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarViajesTodos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarViajesTodosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NegocioEmp.Entidad" minOccurs="0" name="BuscarViajesTodosResult" nillable="true" type="q1:ArrayOfViajeM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarViajes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RangoInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="RangoFinal" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="IdVehiculo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarViajesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NegocioEmp.Entidad" minOccurs="0" name="BuscarViajesResult" nillable="true" type="q2:ArrayOfViajeM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarViajes2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RangoInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="RangoFinal" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="placa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarViajes2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/NegocioEmp.Entidad" minOccurs="0" name="BuscarViajes2Result" nillable="true" type="q3:ArrayOfViajeM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
